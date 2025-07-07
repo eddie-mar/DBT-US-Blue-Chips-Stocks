@@ -1,0 +1,6 @@
+version: 2
+
+seeds: 
+  - name: company_metadata
+    description: >
+      Seed file containing blue chips company and ticker symbol

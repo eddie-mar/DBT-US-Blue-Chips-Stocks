@@ -6,6 +6,8 @@ sources:
     schema: stg_data
     tables:
       - name: stg_us_blue_chips
-      - name: blue_chips_company
 
-      
+models:
+  - name: stg_us_blue_chips_stocks
+    description: >
+      Stocks data from US Blue Chips Stocks.

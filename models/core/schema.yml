@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fact_us_blue_chips
+    description: >
+      Table contains US Blue Chips data with averages and volatility.
+    columns:
+      - name: open_price, highest_price, lowest_price, closing_price
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              strictly: true
+
+  - name: dim_companies
+    description: >
+      Table containing blue chips stocks company name and ticker

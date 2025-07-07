@@ -14,3 +14,15 @@ models:
   - name: dim_companies
     description: >
       Table containing blue chips stocks company name and ticker
+
+  - name: monthly_analysis.sql
+    description: >
+      Contains monthly average for recent stock prices 2020-present
+
+  - name: yearly_analysis.sql
+    description: >
+      Contains yearly average for recent stock prices 2020-present
+  
+  - name: merged_yearly_monthly_gains.sql
+    description: >
+      Contains yearly and monthly average for recent stock prices 2020-present

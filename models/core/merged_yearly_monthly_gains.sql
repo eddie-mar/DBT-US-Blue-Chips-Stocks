@@ -5,10 +5,10 @@
 }}
 
 with monthly as (
-    select * from monthly_analysis
+    select * from {{ ref('monthly_analysis') }}
 ),
 yearly as (
-    select * from yearly_analysis
+    select * from {{ ref('yearly_analysis') }}
 )
 
 select monthly.year,
@@ -23,4 +23,4 @@ select monthly.year,
 
 from monthly inner join yearly
 on monthly.year = yearly.year
-order by year desc, month desc, monthly_gain desc
+order by year desc, month desc, monthly_gain desc, yearly_gain desc

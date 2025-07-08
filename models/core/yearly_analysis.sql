@@ -32,4 +32,4 @@ gained_yearly as (
 
 select year, ticker, avg_yearly, avg_prev_year, yearly_gain
 from gained_yearly
-order by year desc, avg_yearly desc
+order by year desc, yearly_gain desc

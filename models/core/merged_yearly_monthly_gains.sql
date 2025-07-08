@@ -22,5 +22,5 @@ select monthly.year,
     yearly.yearly_gain
 
 from monthly inner join yearly
-on monthly.year = yearly.year
+on monthly.year = yearly.year and monthly.ticker = yearly.ticker
 order by year desc, month desc, monthly_gain desc, yearly_gain desc

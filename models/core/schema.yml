@@ -5,10 +5,29 @@ models:
     description: >
       Table contains US Blue Chips data prices and volume with averages and volatility.
     columns:
-      - name: open_price, highest_price, lowest_price, closing_price
+      - name: open_price
         tests:
           - dbt_expectations.expect_column_values_to_be_between:
               min_value: 0
+              max_value: 1000000
+              strictly: true
+      - name: lowest_price
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1000000
+              strictly: true
+      - name: highest_price
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1000000
+              strictly: true
+      - name: closing_price
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1000000
               strictly: true
 
   - name: dim_companies

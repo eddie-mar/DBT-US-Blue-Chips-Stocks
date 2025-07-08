@@ -19,3 +19,4 @@ select ticker,
 
 from {{ ref('fact_us_blue_chips') }}
 where extract(year from price_date) >= 2020 and price_date is not null
+order by ticker, price_date

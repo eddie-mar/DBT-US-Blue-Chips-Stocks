@@ -10,4 +10,27 @@ sources:
 models:
   - name: stg_us_blue_chips_stocks
     description: >
-      Stocks data from US Blue Chips Stocks.
+      Stocks data from US Blue Chips Stocks. According to Yahoo Finance most active blue chips stocks.
+    columns:
+      - name: stockid
+        description: Primary key for this table, generated using date and ticker.
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+              severity: warn
+      - name: price_date
+        description: Date when the price of the stock was recorded.
+      - name: ticker
+        description: Ticker symbol for the company
+      - name: open_price
+        description: The first traded price for the stock for the date
+      - name: highest_price
+        description: The highest price which the stock was traded
+      - name: lowest_price
+        description: The lowest price which the stock was traded
+      - name: closing_price
+        description: The last traded price for the stock for the date
+      - name: volume
+        description: The number of stocks or shares traded for the day
+

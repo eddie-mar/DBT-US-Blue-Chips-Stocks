@@ -3,7 +3,7 @@ version: 2
 models:
   - name: fact_us_blue_chips
     description: >
-      Table contains US Blue Chips data with averages and volatility.
+      Table contains US Blue Chips data prices and volume with averages and volatility.
     columns:
       - name: open_price, highest_price, lowest_price, closing_price
         tests:
@@ -13,7 +13,7 @@ models:
 
   - name: dim_companies
     description: >
-      Table containing blue chips stocks company name and ticker
+      Dimension table containing blue chips stocks company name and ticker
 
   - name: monthly_analysis.sql
     description: >

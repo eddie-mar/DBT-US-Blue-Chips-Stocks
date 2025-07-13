@@ -32,7 +32,7 @@ data as (
 filled as (
     select
         {{ dbt_utils.generate_surrogate_key(['ct.price_date', 'ct.ticker']) }} as stockid,
-        ct.price_date,
+        cast(ct.price_date as date) as price_date,
         ct.ticker,
         last_value(open_price ignore nulls) over (
             partition by ct.ticker order by ct.price_date
